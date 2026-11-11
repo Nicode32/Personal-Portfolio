@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Niharika Tiwari | Penetration Tester & Security Researcher</title>
+<meta name="description" content="Niharika Tiwari: VAPT, red team, web security research and honeypots. Projects, experience and downloadable certificates.">
+<meta name="theme-color" content="#131619">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#131619;--panel:#1a1e22;--line:#2b3136;--fg:#e6e2d9;--dim:#8d9399;--a:#d4503a;--ok:#9db38c;--warn:#c9a45c}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--fg);font:14.5px/1.7 "IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+#bar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--a);z-index:20}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;gap:2px;align-items:center;padding:10px clamp(12px,4vw,40px);background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav b{margin-right:auto;color:var(--fg);font-weight:500}nav b i{color:var(--a);font-style:normal}
+nav a{color:var(--dim);text-decoration:none;padding:4px 10px;font-size:13px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+nav a:hover,nav a.on{color:var(--fg);border-bottom-color:var(--a)}
+section{position:relative;max-width:1040px;margin:0 auto;padding:clamp(64px,10vw,110px) clamp(16px,4vw,40px) 10px}
+h2{font:400 clamp(34px,5vw,52px)/1.05 "Instrument Serif",Georgia,serif;margin:0 0 28px;letter-spacing:-.01em}
+h2 i{font-style:normal;color:var(--a);font-family:"IBM Plex Mono",monospace;font-size:.5em;margin-right:.4em;vertical-align:.25em}
+a{color:var(--fg)}
+:focus-visible{outline:2px solid var(--a);outline-offset:3px}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
+#top{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:100px}
+.hi{color:var(--dim);margin:0 0 10px}
+h1{font:400 clamp(54px,10vw,118px)/.92 "Instrument Serif",Georgia,serif;margin:0 0 18px;letter-spacing:-.02em;color:var(--fg)}
+.role{font-size:clamp(15px,2.2vw,19px);min-height:1.7em;color:var(--fg)}.role span{color:var(--ok)}
+.cur{display:inline-block;width:.55em;height:1.05em;background:var(--a);vertical-align:-.2em;animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.lead{color:var(--dim);max-width:52ch;margin:14px 0 26px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;gap:8px;align-items:center;font:inherit;font-size:13.5px;padding:10px 18px;border-radius:4px;border:1px solid var(--line);background:transparent;color:var(--fg);text-decoration:none;transition:border-color .2s,background .2s,color .2s;cursor:pointer}
+.btn:hover{border-color:var(--a);color:#fff}
+.btn.pri{background:var(--fg);color:#14171a;border-color:var(--fg);font-weight:600}.btn.pri:hover{background:var(--a);border-color:var(--a);color:#fff}
+.term{background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.tb{display:flex;gap:7px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.tb i{width:9px;height:9px;border-radius:50%;background:#3a4147}
+.tb em{margin:0 auto;font-style:normal;color:var(--dim);font-size:12px}
+#tt{padding:16px;min-height:290px;font-size:13px;white-space:pre-wrap}
+.g{color:var(--ok)}.d{color:var(--dim)}.p{color:var(--a)}.y{color:var(--warn)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:34px;border-block:1px solid var(--line)}
+.st{padding:20px 16px;border-right:1px solid var(--line)}.st:last-child{border-right:0}
+.st b{display:block;font:400 48px/1 "Instrument Serif",Georgia,serif;color:var(--fg)}.st span{font-size:12px;color:var(--dim)}
+.tl{position:relative;padding-left:26px;border-left:1px solid var(--line)}
+.tl>div{position:relative;margin-bottom:22px;padding:4px 0 4px 6px}
+.tl>div::before{content:"";position:absolute;left:-31px;top:10px;width:9px;height:9px;background:var(--a)}
+.tl h3{margin:0;font-size:15px;font-weight:600}.tl small{color:var(--dim)}.tl p{margin:8px 0 0;color:#b9bcc0;max-width:70ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:20px;transition:border-color .2s,transform .2s;position:relative}
+.card:hover{border-color:var(--a);transform:translateY(-3px)}
+.card h3{margin:0 0 8px;font-size:15px;font-weight:600}.card p{margin:0 0 12px;color:#b9bcc0;font-size:13.5px}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:3px;padding:0 8px;margin:2px 4px 2px 0;font-size:12px;color:var(--dim)}
+.cert .by{color:var(--a);font-size:12px}.cert .row{display:flex;gap:8px;margin-top:14px}.cert .btn{padding:7px 12px;font-size:12.5px}
+.mq{overflow:hidden;border-block:1px solid var(--line);padding:14px 0;margin-top:30px}
+.mq #mq{display:inline-flex;gap:34px;width:max-content;white-space:nowrap;animation:mq 40s linear infinite;color:var(--dim)}
+.mq:hover #mq{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.sh{max-width:640px}.sh .o{min-height:90px;font-size:13px}.sh .r{display:flex;gap:8px;padding:0 16px 16px}
+.sh input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:var(--fg);font:inherit;font-size:13px;caret-color:var(--a)}
+footer{text-align:center;color:var(--dim);font-size:12px;padding:60px 16px 40px}
+@media(max-width:820px){#top{grid-template-columns:1fr;padding-top:90px}.stats{grid-template-columns:repeat(2,1fr)}.st:nth-child(2){border-right:0}.st:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media (prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav aria-label="Sections"><b>niharika<i>@</i>kali:~$</b>
+<a href="#top">home</a><a href="#about">about</a><a href="#experience">experience</a><a href="#projects">projects</a><a href="#skills">skills</a><a href="#certs">certs</a><a href="#contact">contact</a></nav>
+
+<section id="top">
+ <div>
+  <p class="hi">&gt; hello, world. i am</p>
+  <h1>Niharika Tiwari</h1>
+  <div class="role" aria-live="off"><span id="role"></span><i class="cur"></i></div>
+  <p class="lead">4th-year CSE student who breaks web apps, builds honeypots and teaches LLM agents to hunt vulnerabilities. Looking for a VAPT / Penetration Tester role.</p>
+  <div class="btns">
+   <a class="btn pri" href="Niharika_Tiwari_Resume.pdf" download>Download Resume</a>
+   <a class="btn" href="https://github.com/Nicode32" target="_blank" rel="noopener noreferrer">GitHub</a>
+   <a class="btn" href="https://www.linkedin.com/in/niharika-tiwari-60aa01275/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+   <a class="btn" href="mailto:niharikat.423@gmail.com">Email</a>
+  </div>
+ </div>
+ <div class="term" aria-hidden="true"><div class="tb"><i></i><i></i><i></i><em>zsh: niharika</em></div><div id="tt"></div></div>
+</section>
+
+<section id="about">
+ <h2 class="rv"><i>#</i> About</h2>
+ <p class="rv" style="max-width:68ch">I study CSE at CSJM University and specialize in cybersecurity. My work sits where offensive security meets AI: multi-agent web vulnerability scanners, LLM-powered honeypots and red team tooling. I like finding the bug nobody looked at, then explaining it so the team can fix it.</p>
+ <div class="stats rv">
+  <div class="st"><b data-n="4">0</b><span>security internships</span></div>
+  <div class="st"><b data-n="75" data-s="%">0</b><span>scanner failures fixed</span></div>
+  <div class="st"><b data-n="5">0</b><span>certificates</span></div>
+  <div class="st"><b data-n="1">0</b><span>CTF win</span></div>
+ </div>
+</section>
+
+<section id="experience">
+ <h2 class="rv"><i>#</i> Experience</h2>
+ <div class="tl">
+  <div class="rv"><h3>System &amp; Software Security Intern, NIELIT Gorakhpur (ISEA)</h3><small>Sep 2026 to Nov 2026</small><p>Building a Telnet honeypot in Python and Docker with a Streamlit dashboard and a local LLM that classifies attacker sessions.</p></div>
+  <div class="rv"><h3>Cybersecurity Research Intern, MNIT Jaipur</h3><small>24 Dec 2025 to 30 Mar 2026</small><p>Extended the YURASCANNER web scanner with a 5-agent system (Perception, Planner, Navigator, Data Synthesis, Critic). Fixed 75% of Missing State failures and token-limit crashes. Benchmarked 4 crawlers.</p></div>
+  <div class="rv"><h3>Red Team Intern, Uptoskills</h3><small>Dec 2025 to Mar 2026</small><p>Blackbox pentest using Nmap, ffuf and Gobuster (found an exposed .git/config and hidden API routes), plus manual IDOR, XSS, CSRF, SSRF and open-redirect testing in Burp Suite Pro.</p></div>
+  <div class="rv"><h3>Cybersecurity Research Intern, IIITDM Jabalpur</h3><small>6 Dec 2025 to 6 Jan 2026</small><p>Built a lightweight ECC-based multi-factor authentication scheme for Industrial IoT devices.</p></div>
+ </div>
+</section>
+
+<section id="projects">
+ <h2 class="rv"><i>#</i> Projects</h2>
+ <div class="grid">
+  <a class="card rv" style="text-decoration:none;color:inherit" href="https://github.com/Nicode32/CIV" target="_blank" rel="noopener noreferrer"><h3>CIV &#8599;</h3><p>AI-driven social engineering red team tool. OSINT profiling plus LLM-generated spear-phishing, mapped to MITRE ATT&amp;CK.</p><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">Selenium</span></a>
+  <div class="card rv"><h3>Zarpay</h3><p>A payment app whose backend is an LLM honeypot. Deception over detection.</p><span class="tag">LLM</span><span class="tag">Honeypot</span></div>
+  <div class="card rv"><h3>YURASCANNER multi-agent</h3><p>Five cooperating agents that explore state-heavy web apps where ordinary crawlers get lost.</p><span class="tag">Multi-agent</span><span class="tag">DAST</span></div>
+  <div class="card rv"><h3>Telnet honeypot</h3><p>Raw-socket Python honeypot in Docker, with a live Streamlit dashboard and local LLM session classification.</p><span class="tag">Docker</span><span class="tag">Streamlit</span><span class="tag">Ollama</span></div>
+ </div>
+</section>
+
+<section id="skills">
+ <h2 class="rv"><i>#</i> Skills</h2>
+ <p class="rv" style="color:var(--dim)">Techniques: VAPT, OWASP Top 10, IDOR, XSS, CSRF, SSRF, SQL Injection, OSINT, DAST. Languages: Python, Java, JavaScript, Bash, SQL.</p>
+ <div class="mq rv" aria-label="Tools"><div id="mq"></div></div>
+</section>
+
+<section id="certs">
+ <h2 class="rv"><i>#</i> Certificates</h2>
+ <div class="grid">
+  <div class="card cert rv"><span class="by">MNIT Jaipur</span><h3>Internship Certificate</h3><p>Autonomous Multi-Agent Web Vulnerability Scanner. Dec 2025 to Mar 2026.</p><div class="row"><a class="btn" href="certs/MNIT_Jaipur_Internship.pdf" target="_blank" rel="noopener">View</a><a class="btn pri" href="certs/MNIT_Jaipur_Internship.pdf" download>PDF</a></div></div>
+  <div class="card cert rv"><span class="by">IIITDM Jabalpur</span><h3>Internship Certificate</h3><p>Lightweight ECC authentication for IoT devices. Dec 2025 to Jan 2026.</p><div class="row"><a class="btn" href="certs/IIITDM_Jabalpur_Internship.pdf" target="_blank" rel="noopener">View</a><a class="btn pri" href="certs/IIITDM_Jabalpur_Internship.pdf" download>PDF</a></div></div>
+  <div class="card cert rv"><span class="by">TryHackMe</span><h3>Cyber Security 101</h3><p>Learning path, 45 h 23 min. Aug 2026.</p><div class="row"><a class="btn" href="certs/TryHackMe_Cyber_Security_101.pdf" target="_blank" rel="noopener">View</a><a class="btn pri" href="certs/TryHackMe_Cyber_Security_101.pdf" download>PDF</a></div></div>
+  <div class="card cert rv"><span class="by">TryHackMe</span><h3>Pre Security</h3><p>Learning path, 19 h 10 min. Apr 2026.</p><div class="row"><a class="btn" href="certs/TryHackMe_Pre_Security.pdf" target="_blank" rel="noopener">View</a><a class="btn pri" href="certs/TryHackMe_Pre_Security.pdf" download>PDF</a></div></div>
+  <div class="card cert rv"><span class="by">Udemy, z Security</span><h3>Bug Bounty Hunting &amp; Web Security Testing</h3><p>11 hours. Mar 2026.</p><div class="row"><a class="btn" href="certs/Udemy_Bug_Bounty_Hunting.pdf" target="_blank" rel="noopener">View</a><a class="btn pri" href="certs/Udemy_Bug_Bounty_Hunting.pdf" download>PDF</a></div></div>
+ </div>
+</section>
+
+<section id="contact">
+ <h2 class="rv"><i>#</i> Contact</h2>
+ <p class="rv" style="color:var(--dim)">Email me, or try the shell below. Type <b>help</b>.</p>
+ <div class="term sh rv"><div class="tb"><i></i><i></i><i></i><em>contact.sh</em></div><div class="o" id="o" style="padding:14px 16px"></div>
+  <label class="r"><span class="g">$</span><input id="in" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command" placeholder="help"></label></div>
+</section>
+<footer>Built by hand by Niharika Tiwari. No frameworks, just curiosity.</footer>
+
+<script>
+(function(){
+"use strict";
+var $=function(s){return document.querySelector(s)},rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+var bar=$("#bar"),links=[].slice.call(document.querySelectorAll("nav a"));
+addEventListener("scroll",function(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%"},{passive:true});
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(l){l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id)})})},{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("section").forEach(function(s){so.observe(s)});
+
+function count(el){var n=+el.dataset.n,s=el.dataset.s||"",st=performance.now();(function f(now){var p=Math.min((now-st)/1200,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+s;if(p<1)requestAnimationFrame(f)})(st)}
+var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");e.target.querySelectorAll("[data-n]").forEach(count);ro.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll(".rv").forEach(function(e,i){e.style.transitionDelay=(i%4)*70+"ms";ro.observe(e)});
+
+document.querySelectorAll(".card").forEach(function(c){c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;c.style.setProperty("--mx",x+"px");c.style.setProperty("--my",y+"px");if(!rm)c.style.transform="perspective(700px) rotateX("+((y/r.height-.5)*-6)+"deg) rotateY("+((x/r.width-.5)*8)+"deg) translateY(-4px)"});c.addEventListener("pointerleave",function(){c.style.transform=""})});
+
+var tools="Burp Suite Pro,Nmap,Wireshark,Metasploit,ffuf,Gobuster,Dalfox,Wapiti,Airmon-ng,Maltego,Sliver,Netcat,Knockpy,theHarvester,Kali Linux,Docker,LangChain,Selenium,Streamlit,Flask".split(",");
+$("#mq").innerHTML=tools.concat(tools).map(function(t){return "<span>&lt;"+t+"/&gt;</span>"}).join("");
+
+var roles=["Penetration Tester","Red Team Intern","Multi-agent security researcher","Honeypot builder","CTF winner"],ri=0,ci=0,del=false,re=$("#role");
+(function ty(){var w=roles[ri];re.textContent=w.slice(0,ci);if(rm){re.textContent=w;return}
+ if(!del&&ci<w.length){ci++;setTimeout(ty,70)}else if(!del){del=true;setTimeout(ty,1400)}else if(ci>0){ci--;setTimeout(ty,35)}else{del=false;ri=(ri+1)%roles.length;setTimeout(ty,250)}})();
+
+var script=[
+  { prompt: '<span class="g">niharika@kali</span>:<span class="p">~</span>$ whoami', txt: 'whoami', output: '\nniharika, pentester + researcher\n\n' },
+  { prompt: '<span class="g">niharika@kali</span>:<span class="p">~</span>$ nmap -p- portfolio', txt: 'nmap -p- portfolio', output: '\n<span class="d">PORT     STATE  SERVICE</span>\n22/tcp   <span class="g">open</span>   curiosity\n80/tcp   <span class="g">open</span>   projects\n443/tcp  <span class="g">open</span>   internships\n\n' },
+  { prompt: '<span class="g">niharika@kali</span>:<span class="p">~</span>$ cat status.txt', txt: 'cat status.txt', output: '\n<span class="y">open to VAPT / pentest roles</span>\nscroll down for the good stuff' }
+], tt=$("#tt");
+
+(function run(i){
+  if(i>=script.length){tt.insertAdjacentHTML("beforeend","\n<span class=\"g\">niharika@kali</span>:<span class=\"p\">~</span>$ <i class=\"cur\"></i>");return}
+  if(rm){tt.insertAdjacentHTML("beforeend",script[i].prompt+script[i].output);return run(i+1)}
+  var item=script[i], base=tt.innerHTML, pre='<span class="g">niharika@kali</span>:<span class="p">~</span>$ ', typed=item.txt, k=0;
+  (function t(){
+    if(k<=typed.length){tt.innerHTML=base+pre+typed.slice(0,k)+'<i class="cur"></i>';k++;setTimeout(t,45)}
+    else{tt.innerHTML=base+item.prompt+item.output;setTimeout(function(){run(i+1)},500)}
+  })()
+})(0);
+
+var o=$("#o"),inp=$("#in");
+function say(h){var d=document.createElement("div");d.innerHTML=h;o.appendChild(d)}
+var C={help:"commands: <b>whoami, email, github, linkedin, resume, certs, sudo hire niharika, clear</b>",whoami:"niharika, pentester + researcher",
+ email:'<a href="mailto:niharikat.423@gmail.com">niharikat.423@gmail.com</a>',github:'<a href="https://github.com/Nicode32" target="_blank" rel="noopener noreferrer">github.com/Nicode32</a>',
+ linkedin:'<a href="https://www.linkedin.com/in/niharika-tiwari-60aa01275/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>',
+ resume:'<a href="Niharika_Tiwari_Resume.pdf" download>Niharika_Tiwari_Resume.pdf</a>',certs:'<a href="#certs">jump to certificates</a>'};
+inp.addEventListener("keydown",function(e){if(e.key!=="Enter")return;var v=inp.value.trim(),k=v.toLowerCase();inp.value="";var d=document.createElement("div");d.innerHTML='<span class="g">$</span> ';d.appendChild(document.createTextNode(v));o.appendChild(d);
+ if(k==="clear"){o.innerHTML="";return}
+ if(/^sudo hire niharika$/.test(k))say('<span class="g">[sudo] permission granted.</span> Great choice. '+C.email);
+ else if(k.indexOf("sudo")===0)say("niharika is not in the sudoers file. This incident will be reported");
+ else if(C[k])say(C[k]);else if(k)say('<span class="y">command not found.</span>  try help');
+ o.scrollTop=o.scrollHeight});
+say("type <b>help</b> to start");
+})();
+</script>
+</body>
+</html>
